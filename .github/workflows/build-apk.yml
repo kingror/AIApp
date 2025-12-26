@@ -1,4 +1,5 @@
-name: Build APK
+# "Install system dependencies" section me portaudio19-dev add karo
+# Save & exit: CTRL+X → Y → Entername: Build APK
 
 on:
   push:
@@ -22,7 +23,7 @@ jobs:
       run: |
         sudo apt update
         sudo apt install -y python3-pip python3-venv git clang make \
-        zlib1g-dev libffi-dev libssl-dev build-essential
+        zlib1g-dev libffi-dev libssl-dev build-essential portaudio19-dev
 
     - name: Install Python packages
       run: |
