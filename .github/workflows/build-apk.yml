@@ -1,5 +1,4 @@
-# "Install system dependencies" section me portaudio19-dev add karo
-# Save & exit: CTRL+X → Y → Entername: Build APK
+name: Build APK
 
 on:
   push:
@@ -28,7 +27,7 @@ jobs:
     - name: Install Python packages
       run: |
         python3 -m pip install --upgrade pip setuptools wheel
-        pip install buildozer kivy kivymd requests python-dotenv openai gtts SpeechRecognition pyaudio
+        pip install buildozer kivy kivymd requests python-dotenv openai gtts SpeechRecognition pyaudio Cython
 
     - name: Build APK
       run: |
